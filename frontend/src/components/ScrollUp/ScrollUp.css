@@ -1,0 +1,29 @@
+.scroll-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif; /* Attractive modern font */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-up-button:hover {
+    background: linear-gradient(135deg, #4e6388, #cb8a11);
+    color: #fff;
+    transform: scale(1.2) rotate(15deg);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,50 @@
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px auto; /* Center the table and space it vertically */
+    background: #fff; /* Clean white background */
+    overflow: hidden; /* Ensures content stays within bounds */
+    max-width: 90%; /* Limit the width to 80% of the container */
+}
+
+.list-table-format.title {
+    background-color: #d3d7df;
+    font-weight: bold; /* Makes title row distinct */
+    text-transform: uppercase; /* Capitalize for emphasis */
+    border: none;
+}
+
+.list-table-format img {
+    max-width: 100%;
+    border-radius: 50%; /* Circular images for profile-like visuals */
+    display: block;
+    margin: 0 auto; /* Center image */
+}
+
+.list-table-format p,
+.list-table-format.title p {
+    text-align: center;
+    margin: 0; /* Remove default margin for compact design */
+    font-size: 0.9rem; /* Smaller font for compact layout */
+    color: #333; /* Darker text for better readability */
+}
+
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    .list-table-format.title {
+        display: none; /* Hide title row for smaller screens */
+    }
+    .list-table-format p {
+        font-size: 0.8rem; /* Slightly smaller font on mobile */
+    }
+    .list-table-format {
+        padding: 6px 10px; /* Reduce padding for small screens */
+    }
+}

@@ -1,0 +1,76 @@
+/* Base Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto; /* Center horizontally */
+    padding: 10px 20px; /* Consistent padding */
+    height: 100px; /* Automatically adjusts height */
+    border-radius: 20px;
+    color: rgb(13, 15, 17);
+    background-color: rgba(160, 196, 79, 0.7); /* Light background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 90%; /* Limit the width to fit within the viewport */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.logo {
+    width: 150px; /* Base logo size */
+    margin: 0; /* Remove excess margins */
+}
+
+.navbar .profile {
+    width: 60px; /* Base profile size */
+    margin: 0; /* Remove excess margins */
+    border-radius: 50%; /* Circular profile image */
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: row; /* Keep row layout for tablets */
+        justify-content: space-between; /* Space content evenly */
+        padding: 10px; /* Reduce padding */
+        max-width: 95%; /* Slightly wider for tablets */
+    }
+
+    .logo {
+        width: 100px; /* Scale down logo for tablets */
+    }
+
+    .navbar .profile {
+        width: 45px; /* Adjust profile size */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align content */
+        height: 100px; /* Adjust height dynamically */
+        padding: 15px; /* Add more padding for touch devices */
+    }
+
+    .logo {
+        width: 80px; /* Scale down logo for mobile */
+    }
+
+    .navbar .profile {
+        width: 40px; /* Adjust profile size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        margin: 5px auto; /* Compact margins */
+        padding: 10px; /* Compact padding */
+    }
+
+    .logo {
+        width: 70px; /* Further scale down logo */
+    }
+
+    .navbar .profile {
+        width: 35px; /* Further adjust profile size */
+    }
+}

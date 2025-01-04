@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Revolution&family=Quicksand:wght@300..700&display=swap');
+.explore-menu h1 {
+    font-size: 2rem; /* Slightly larger for a classic feel */
+    font-weight: 800; /* Balanced weight */
+    font-family:"Merriweather", serif;
+    font-style: italic;
+    color: rgb(15, 14, 14); /* Maintain original color */
+}
+
+.explore-menu-text {
+    color: #2C3E50; /* Rich dark blue-gray, elegant and modern */
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    max-width: 90%; /* Retain layout */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+
+
+.explore-menu hr {
+    margin: 10px 0; /* Same spacing */
+    height: 2px; /* Same height */
+    background-color: #262626; /* Maintain original color */
+    border: none;
+    display: none;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    overflow-x: scroll; /* Retain scroll behavior */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.explore-menu-list-item .active {
+    border: 8px solid black; /* Highlight the active item */
+    background-color: white; /* Ensure the background stays white */
+    background-image: none; /* Prevent any background image from being applied */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for emphasis */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+.explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%; /* Maintain round images */
+    background-color: white; /* Explicitly set background color */
+    background-image: none; /* Prevent image from being applied */
+    transition: transform 0.2s, box-shadow 0.2s; /* Add hover animation */
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px; /* Keep original spacing */
+    color: black;
+    font-size: max(1.2vw, 14px); /* Maintain responsive sizing */
+    font-family: 'Georgia', serif; /* Add classic font */
+    cursor: pointer;
+}
+@media (max-width:760px){
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

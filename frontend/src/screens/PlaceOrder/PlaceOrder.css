@@ -1,0 +1,194 @@
+/* Base Container */
+.place-order {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+    background: black; /* Dark background */
+    color: #fff; /* White text for contrast */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Delivery Info & Cart Totals Containers */
+.delivery-info,
+.cart-totals {
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark gray for contrast */
+    width: 48%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.delivery-info:hover,
+.cart-totals:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.delivery-info h2,
+.cart-totals h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #dd580b; /* Highlighted color */
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #2ca4b4, 0 0 10px #25a8b9#dd580b, 0 0 15px #2b85b9;
+    }
+    to {
+        text-shadow: 0 0 15px #2c72a1, 0 0 30px #15aed4, 0 0 45px #18d6d6;
+    }
+}
+
+/* Delivery Info Form */
+.delivery-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row input {
+    width: calc(50% - 7.5px);
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #000;
+    color: #dd580b; /* Highlighted text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delivery-info input {
+    background: #000;
+    color: #dd580b;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+.delivery-info input:focus {
+    outline: none;
+    border-color: #dd580b;
+    box-shadow: 0 0 10px #dd580b;
+}
+
+/* Cart Totals Section */
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #dd580b;
+}
+
+.cart-total-details p:last-child {
+    font-weight: bold;
+    color: #fff;
+}
+
+.cart-totals hr {
+    border: 1px solid #333;
+    margin: 20px 0;
+}
+
+.cart-totals button {
+    display: block;
+    width: 50%;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #000;
+    background-color: #dd580b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-totals button:hover {
+    background-color: #96a13d;
+    transform: scale(1.1);
+}
+
+/* Accessibility Improvements */
+.delivery-info input,
+.cart-totals button {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .delivery-info,
+    .cart-totals {
+        width: 100%;
+    }
+
+    .cart-totals button {
+        width: 100%;
+    }
+}
+
+/* Styling for error or success messages */
+.form-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.form-message.error {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.form-message.success {
+    background-color: #00b300;
+    color: #fff;
+}
+
+/* Smooth Background Animation */
+@keyframes background-shift {
+    0% {
+        background: linear-gradient(45deg, #000, #1e1e1e);
+    }
+    50% {
+        background: linear-gradient(45deg, #1e1e1e, #000);
+    }
+    100% {
+        background: linear-gradient(45deg, #000, #1e1e1e);
+    }
+}
+
+.place-order {
+    animation: background-shift 10s infinite alternate;
+}

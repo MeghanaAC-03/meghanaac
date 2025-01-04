@@ -1,0 +1,80 @@
+.sidebar {
+    width: 25%;
+    min-height: 100vh;
+    background: #f9f9f9; /* Light background for a clean look */
+    border-right: 1px solid #ddd; /* Subtle border for separation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Comfortable spacing */
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between options */
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333; /* Dark text for readability */
+    background-color: #fff; /* White background for contrast */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Comfortable padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for pop-out effect */
+    transition: all 0.3s ease; /* Smooth hover effects */
+    cursor: pointer;
+}
+
+.sidebar-options:hover {
+    background-color: #5db94b; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateX(5px); /* Subtle movement for interactivity */
+}
+
+.sidebar-options:active {
+    background-color: #ffe4e4; /* Soft red background when clicked */
+    border-color: #ff5e5e; /* Matching border color */
+}
+
+.sidebar-options img {
+    width: 30px; /* Fixed size for icons */
+    height: 30px;
+    border-radius: 50%; /* Circular icons for consistency */
+    object-fit: cover; /* Ensures image fits the container */
+}
+
+.sidebar-options p {
+    margin: 0; /* No margin for compact design */
+    font-size: 1rem; /* Balanced font size */
+    font-weight: 500; /* Slightly bold text */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full-width sidebar on smaller screens */
+        min-height: auto; /* Adjust height */
+        border-right: none; /* Remove border for a clean look */
+        box-shadow: none; /* Simplify design for smaller screens */
+    }
+    .sidebar-options {
+        padding: 8px 10px; /* Compact padding */
+        font-size: 0.9rem; /* Smaller font */
+    }
+    .sidebar-options:hover {
+        transform: none; /* Remove hover movement for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-options {
+        flex-direction: column; /* Stack icon and text vertically */
+        gap: 8px; /* Adjust spacing */
+        text-align: center; /* Center-align content */
+    }
+}

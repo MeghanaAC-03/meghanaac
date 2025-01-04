@@ -1,0 +1,312 @@
+.footer {
+    color: #d9d9d9;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduce gap between elements */
+    padding: 20px 5vw; /* Compact padding */
+    padding-top: 30px; /* Shorten top padding */
+    margin-top: 50px; /* Reduce margin above the footer */
+    border-radius: 15px; /* Slightly smaller radius */.footer {
+        color: #d9d9d9;
+        background-color: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduce gap between elements */
+        padding: 20px 5vw; /* Compact padding */
+        padding-top: 30px; /* Shorten top padding */
+        margin-top: 50px; /* Reduce margin above the footer */
+        border-radius: 15px; /* Slightly smaller radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjust shadow for subtlety */
+        position: relative; /* Position for additional decorative elements */
+        overflow: hidden; /* Hide overflow for design elements */
+    }
+    
+    /* Decorative glow effect */
+    .footer::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 150%; /* Smaller glow size */
+        height: 150%;
+        background: radial-gradient(circle at center, rgba(255, 117, 140, 0.1), transparent);
+        z-index: 0;
+        animation: spin-glow 15s linear infinite; /* Faster subtle rotating glow */
+    }
+    
+    /* Footer Content Styling */
+    .footer-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px; /* Reduce column spacing */
+        position: relative;
+        z-index: 1; /* Ensure content is above the decorative glow */
+    }
+    
+    .footer-content-left img {
+        width: 150px; /* Reduce logo size */
+        padding-bottom: 5px; /* Compact spacing */
+        transition: transform 0.3s ease; /* Smooth hover animation for logo */
+    }
+    
+    .footer-content-left img:hover {
+        transform: scale(1.05); /* Subtle zoom on hover */
+    }
+    
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        gap: 10px; /* Reduce gap between items */
+    }
+    
+    .footer-content-center li,
+    .footer-content-right li {
+        list-style: none;
+        margin-bottom: 5px; /* Compact spacing */
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease; /* Add smooth hover effects */
+    }
+    
+    .footer-content-center li:hover,
+    .footer-content-right li:hover {
+        color: #ff758c; /* Highlight color on hover */
+        transform: translateX(5px); /* Subtle slide effect */
+    }
+    
+    .footer-content-center h2,
+    .footer-content-right h2 {
+        color: white;
+        font-size: 18px; /* Slightly smaller font */
+        font-weight: bold;
+        text-transform: uppercase; /* Modern typography */
+        border-bottom: 2px solid #ff758c; /* Underline for headings */
+        padding-bottom: 3px; /* Compact padding for heading */
+    }
+    
+    /* Social Icons */
+    .footer-social-icons img {
+        width: 30px; /* Smaller icon size */
+        margin-right: 15px; /* Compact spacing */
+        transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth hover effects */
+    }
+    
+    .footer-social-icons img:hover {
+        transform: scale(1.15); /* Enlarge slightly */
+        filter: brightness(1.4); /* Brighten the icon on hover */
+    }
+    
+    /* Separator Line */
+    .footer hr {
+        width: 100%;
+        height: 1px; /* Thinner line */
+        margin: 10px 0; /* Reduce spacing */
+        background-color: #555; /* Softer grey */
+        border: none;
+        opacity: 0.6; /* Subtle transparency */
+    }
+    
+    /* Glow Animation */
+    @keyframes spin-glow {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    /* Responsive Design */
+    
+    /* Medium screens */
+    @media (max-width: 1050px) {
+        .footer-content {
+            grid-template-columns: 1fr 1fr; /* Stack two columns */
+            gap: 20px; /* Reduce column gap */
+        }
+    
+        .footer-content-left img {
+            width: 120px; /* Reduce logo size */
+        }
+    
+        .footer-content-center h2,
+        .footer-content-right h2 {
+            font-size: 16px; /* Slightly smaller font */
+        }
+    
+        .footer-content-center li,
+        .footer-content-right li {
+            font-size: 14px; /* Smaller font size for list items */
+        }
+    }
+    
+    /* Small screens */
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr; /* Stack all columns */
+            gap: 15px; /* Further reduce the gap */
+        }
+    
+        .footer-content-left,
+        .footer-content-center,
+        .footer-content-right {
+            align-items: center; /* Center-align items for smaller screens */
+        }
+    
+        .footer-content-left img {
+            width: 100px; /* Further reduce logo size */
+        }
+    
+        .footer-social-icons img {
+            width: 25px; /* Reduce social icons size */
+        }
+    
+        .footer-content-center h2,
+        .footer-content-right h2 {
+            font-size: 14px; /* Smaller font size for headings */
+        }
+    
+        .footer-content-center li,
+        .footer-content-right li {
+            font-size: 13px; /* Smaller font size for list items */
+        }
+    
+        .footer hr {
+            margin: 5px 0; /* Reduce margin for smaller screens */
+        }
+    }
+    
+    /* Extra small screens */
+    @media (max-width: 480px) {
+        .footer-content-left img {
+            width: 80px; /* Smallest logo size */
+        }
+    
+        .footer-content-center h2,
+        .footer-content-right h2 {
+            font-size: 12px; /* Very small font size for headings */
+        }
+    
+        .footer-content-center li,
+        .footer-content-right li {
+            font-size: 12px; /* Small font size for list items */
+        }
+    
+        .footer-social-icons img {
+            width: 20px; /* Smallest social icons size */
+            margin-right: 10px; /* Reduce margin */
+        }
+    
+        .footer {
+            padding: 15px 3vw; /* Smaller padding on extra small screens */
+        }
+    }
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjust shadow for subtlety */
+    position: relative; /* Position for additional decorative elements */
+    overflow: hidden; /* Hide overflow for design elements */
+}
+
+/* Decorative glow effect */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 150%; /* Smaller glow size */
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(255, 117, 140, 0.1), transparent);
+    z-index: 0;
+    animation: spin-glow 15s linear infinite; /* Faster subtle rotating glow */
+}
+
+/* Footer Content Styling */
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px; /* Reduce column spacing */
+    position: relative;
+    z-index: 1; /* Ensure content is above the decorative glow */
+}
+
+.footer-content-left img {
+    width: 150px; /* Reduce logo size */
+    padding-bottom: 5px; /* Compact spacing */
+    transition: transform 0.3s ease; /* Smooth hover animation for logo */
+}
+
+.footer-content-left img:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 10px; /* Reduce gap between items */
+}
+
+.footer-content-center li,
+.footer-content-right li {
+    list-style: none;
+    margin-bottom: 5px; /* Compact spacing */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth hover effects */
+}
+
+.footer-content-center li:hover,
+.footer-content-right li:hover {
+    color: #ff758c; /* Highlight color on hover */
+    transform: translateX(5px); /* Subtle slide effect */
+}
+
+.footer-content-center h2,
+.footer-content-right h2 {
+    color: white;
+    font-size: 18px; /* Slightly smaller font */
+    font-weight: bold;
+    text-transform: uppercase; /* Modern typography */
+    border-bottom: 2px solid #ff758c; /* Underline for headings */
+    padding-bottom: 3px; /* Compact padding for heading */
+}
+
+/* Social Icons */
+.footer-social-icons img {
+    width: 30px; /* Smaller icon size */
+    margin-right: 15px; /* Compact spacing */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth hover effects */
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.15); /* Enlarge slightly */
+    filter: brightness(1.4); /* Brighten the icon on hover */
+}
+
+/* Separator Line */
+.footer hr {
+    width: 100%;
+    height: 1px; /* Thinner line */
+    margin: 10px 0; /* Reduce spacing */
+    background-color: #555; /* Softer grey */
+    border: none;
+    opacity: 0.6; /* Subtle transparency */
+}
+
+/* Glow Animation */
+@keyframes spin-glow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
